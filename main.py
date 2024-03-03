@@ -5,6 +5,7 @@ import os
 # -*- coding: utf-8 -*-
 
 #import vài thứ
+from keep_alive import keep_alive
 
 from discord.ext import commands
 intents = discord.Intents.all()
@@ -163,6 +164,7 @@ async def khaled(ctx):
   quote = random.choice(khaled_quotes)
   await ctx.send(f"> {quote} - DJ Khaled")
 
+keep_alive()
 TOKEN = os.getenv('TOKEN')
 
 try:
